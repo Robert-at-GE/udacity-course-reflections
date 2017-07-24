@@ -21,3 +21,37 @@ How is the staging area different from the working directory and the repository?
 	That allows that single commit to apply to all the files in that logical group.
 	This lets the author group all the changes for a single feature change reside in the same commit.  
 	This makes it possible for a logical grouping of many changes.
+	
+git diff 					==> diff working directory 	 vs  staging area 
+git diff --staged 			==> diff staging area 		 vs  repository most recent commit
+git diff commit1 commit2 	==> diff reposistory commit1 vs  repository commit2
+
+BRANCHES:
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+	There are lots of cases where branches would be helpful.  
+	A good example would be: 
+	Experimental features before ready for merging.
+
+
+How do the diagrams help you visualize the branch structure?
+	It turns out that commits don't know about branches.  
+	A commit only keeps a reference to its parent commit.  
+	This helps us understand the concept of "reachability". 
+	That is, from a given commit, you can trace only toward 
+	the root, not to arbitrary branch commits.
+	
+git branch     					== shows current (local) branchs	
+git checkout somebranchname 	== attempts to checkout the local branch of that name, 
+								or if not existing, creates a local branch with that name 
+								to track a remote branch of that name.
+							BUT if a FILE/folder of that name exists (locally), 
+							THEN it will checkout that file instead of the branch!!
+LESSON:  Avoid creating BRANCH names that could collide with FILE/folder names!							
+LESSON:  Avoid creating files/folders with names that could collide with BRANCH names!							
+
+
+If you check out a commit that is not at the head of a branch, 
+  then you are in detached HEAD mode. 
+  If you make changes there and want to keep them, 
+  you need to create a branch there like this:
+	git checkout -b mynew_branchname
