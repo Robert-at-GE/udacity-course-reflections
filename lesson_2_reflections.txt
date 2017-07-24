@@ -1,0 +1,5 @@
+What happens when you initialize a repository? Why do you need to do it?
+  - Git creates a .git directory in your current directory.
+  - Git does NOT make any commits automatically at this point.
+  If you do "git status" it shows all the files that exist there as "Untracked".
+  You would need to "git add .." and "git commit" the files you want to put under version control.
