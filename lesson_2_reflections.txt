@@ -1,5 +1,23 @@
+To create a new local repository:
+	git init
+
+Then add the desired files to the staging area:
+	git add file1.txt
+	
+Then commit the added files to the repository:
+	git commit
+
+	
 What happens when you initialize a repository? Why do you need to do it?
   - Git creates a .git directory in your current directory.
   - Git does NOT make any commits automatically at this point.
   If you do "git status" it shows all the files that exist there as "Untracked".
   You would need to "git add .." and "git commit" the files you want to put under version control.
+
+  
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+	The staging area is a group of files identified to be ready to commit.
+	Files can be added to this group, until you have all the files you want in the next commit.
+	That allows that single commit to apply to all the files in that logical group.
+	This lets the author group all the changes for a single feature change reside in the same commit.  
+	This makes it possible for a logical grouping of many changes.
