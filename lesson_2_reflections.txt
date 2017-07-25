@@ -55,3 +55,9 @@ If you check out a commit that is not at the head of a branch,
   If you make changes there and want to keep them, 
   you need to create a branch there like this:
 	git checkout -b mynew_branchname
+	
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+   Well, it is really the only valid option 
+   - since there's no general way to know the right answer every time.	
+   Pro - Notifies authors when there is a conflict that needs to be reviewed.
+   Con - It may require review even if the conflict is obvious to the author.
